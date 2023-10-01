@@ -2,7 +2,7 @@ on: push
 jobs:
   api-exam:
     runs-on: ubuntu-latest
-    container: node:lts
+    container: node:18
     stpes:
       - uses: actions/checkout@v3
       - run: npm install
