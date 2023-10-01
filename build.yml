@@ -1,0 +1,10 @@
+on: push
+jobs:
+  api-exam:
+    runs-on: ubuntu-latest
+    container: node:lts
+    stpes:
+      - uses: actions/checkout@v3
+      - run: npm install
+      - run: node index.js
+
