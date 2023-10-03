@@ -2,10 +2,5 @@ version: 1
 services:
   - type: web
     name: camp-api
-    runtime: docker
-    repo: https://github.com/Bader-Idris/camp-api.git
-    branch: bader
-    rootDir: camp-api
-    dockerCommand: docker-compose -f a.yml -f b.dev.yml up --build
-    dockerfilePath: ./Dockerfile
-    # dockerComposePath: ./a.yml
+    buildCommand: npm install
+    startCommand: npm start
