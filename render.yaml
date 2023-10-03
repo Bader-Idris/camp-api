@@ -1,5 +1,4 @@
 version: 1
-
 services:
   - type: web
     name: camp-api
@@ -12,8 +11,6 @@ services:
     buildCommand: docker-compose -f a.yml -f b.dev.yml build
     startCommand: docker-compose -f a.yml -f b.dev.yml up
     healthCheckPath: /health
-    healthCheckTimeout: 5
-    dockerfile: ./Dockerfile
-    dockerCompose:
-      path: ./a.yml
-    # dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
+    healthCheckTimeoutSeconds: 5
+    dockerfilePath: ./Dockerfile
+    dockerComposePath: ./a.yml
