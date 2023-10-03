@@ -1,11 +1,11 @@
 version: 1
 
 services:
-  - name: express-app
+  - name: timeapis
     env:
       NODE_ENV: development
-    buildCommand: docker-compose build
-    startCommand: docker-compose up
+    buildCommand: docker-compose -f a.yml -f b.dev.yml build
+    startCommand: docker-compose -f a.yml -f b.dev.yml up
     healthCheckPath: /health
     healthCheckTimeout: 5
     dockerfile: ./Dockerfile
