@@ -6,7 +6,6 @@ services:
     repo: https://github.com/Bader-Idris/camp-api.git
     branch: bader
     rootDir: camp-api
-    buildCommand: docker-compose -f a.yml -f b.dev.yml build
-    startCommand: docker-compose -f a.yml -f b.dev.yml up
+    dockerCommand: docker-compose -f a.yml -f b.dev.yml up --build
     dockerfilePath: ./Dockerfile
     # dockerComposePath: ./a.yml
