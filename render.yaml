@@ -6,11 +6,7 @@ services:
     repo: https://github.com/Bader-Idris/camp-api.git
     branch: bader
     rootDir: camp-api
-    env:
-      NODE_ENV: development
     buildCommand: docker-compose -f a.yml -f b.dev.yml build
     startCommand: docker-compose -f a.yml -f b.dev.yml up
-    healthCheckPath: /health
-    healthCheckTimeoutSeconds: 5
     dockerfilePath: ./Dockerfile
-    dockerComposePath: ./a.yml
+    # dockerComposePath: ./a.yml
