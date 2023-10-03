@@ -1,7 +1,12 @@
 version: 1
 
 services:
-  - name: timeapis
+  - type: web
+    name: camp-api
+    runtime: docker
+    repo: https://github.com/Bader-Idris/camp-api.git
+    branch: bader
+    rootDir: camp-api
     env:
       NODE_ENV: development
     buildCommand: docker-compose -f a.yml -f b.dev.yml build
@@ -11,3 +16,4 @@ services:
     dockerfile: ./Dockerfile
     dockerCompose:
       path: ./a.yml
+    # dockerCommand: ./webdis.sh # optional (defaults to Dockerfile command)
