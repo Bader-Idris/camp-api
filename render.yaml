@@ -1,0 +1,13 @@
+version: 1
+
+services:
+  - name: express-app
+    env:
+      NODE_ENV: development
+    buildCommand: docker-compose build
+    startCommand: docker-compose up
+    healthCheckPath: /health
+    healthCheckTimeout: 5
+    dockerfile: ./Dockerfile
+    dockerCompose:
+      path: ./a.yml
